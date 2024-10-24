@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/presets.css">
+    <title>Shader Saver :-)</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Shadertoy Saver</h1>
+        <h4>generate and save shadertoy output as images.</h4>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <b>Shader Preview</b>
+            <div>
+                <canvas id="preview_canvas" width="100" height="100"></canvas>
+            </div>
+            <div id="preview_message"></div>
+        </div>
+
+        <div class="column">
+            <b>Shader Configuration</b>
+            <div>
+                <label for="shader_file_input">Shader File: </label>
+                <input type="file" id="shader_file_input" value="shaders/vorono.glsl">
+            </div>
+        </div>
+
+        <div class="column">
+            <b>Output Configuration</b>
+            <div>
+                <label for="width_input">Output Image Width</label>
+                <input type="number" id="width_input" name="width" min="1" max="100000" value="1024">
+            </div>
+            <div>
+                <label for="height_input">Output Image Height</label>
+                <input type="number" id="height_input" name="height" min="1" max="100000" value="1024">
+            </div>
+            <div>
+                <label for="save_output_input">Save Output?</label>
+                <input type="checkbox" id="save_output_input" name="save_file">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        Output
+        <div>
+            <input class="styled" type="button" id="generate_image_button" value="Generate Image" />
+        </div>
+        <div id="output_message"></div>
+        <image id="output_image"></image>
+    </div>
+
+    <script src="scripts/lib/ShaderToyLite.js">console.log("NO JS")</script>
+    <script src="scripts/utils.js">console.log("NO JS")</script>
+    <script src="scripts/shader-saver.js">console.log("NO JS")</script>
+
+</body>
+
+</html>
